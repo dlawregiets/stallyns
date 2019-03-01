@@ -1,0 +1,9 @@
+[Unit]
+Description=Webapp for changing users for RetroPie/EmulationStation
+
+[Service]
+ExecStart=stallyns
+ExecStop=/bin/true
+
+[Install]
+WantedBy=default.target
