@@ -26,6 +26,10 @@ For now, it is expected that you have all of your ROMs stored in 'user' director
 
     $ pip install --upgrade stallyns
 
+or clone this repo and install:
+
+    $ git clone https://github.com/dlawregiets/stallyns && cd stallyns && pip install .
+
 ## Running
 
 Copy the stallyns.service file to \~/.config/systemd/stallyns.service. Reload systemd for the user and then activate and start the service:
