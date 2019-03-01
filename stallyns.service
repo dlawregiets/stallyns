@@ -2,7 +2,7 @@
 Description=Webapp for changing users for RetroPie/EmulationStation
 
 [Service]
-ExecStart=stallyns
+ExecStart=/home/pi/.local/bin/stallyns
 ExecStop=/bin/true
 
 [Install]
