@@ -32,7 +32,7 @@ After installing, navigate to <http://pi:5000>. A list of users will be displaye
 
 On your first run, all user buttons will be white. When a user directory is symlinked to ~/RetroPie/roms, their button will be blue.
 
-On the initial user selection in stallyns, ~/RetroPie/roms is moved to ~/RetroPie/roms.orig and a symlink is created from *~/roms/USER* to *~/RetroPie/roms*.
+On the initial user selection in stallyns, \~/RetroPie/roms is moved to ~/RetroPie/roms.orig and a symlink is created from *~/roms/USER* to *~/RetroPie/roms*.
 
 ## Issues
 
