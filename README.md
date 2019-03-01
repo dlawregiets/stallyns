@@ -26,6 +26,13 @@ For now, it is expected that you have all of your ROMs stored in 'user' director
 
     $ pip install --upgrade stallyns
 
+## Running
+
+Copy the stallyns.service file to \~/.config/systemd/stallyns.service. Reload systemd for the user and then activate and start the service:
+
+    systemctl --user daemon-reload
+    systemctl --user enable --now stallyns.service
+
 ## Usage
 
 After installing, navigate to <http://pi:5000>. A list of users will be displayed at the top along with a list of system options at the bottom (useful for if your kids won't turn off the games and you just want to shut the whole thing down).
