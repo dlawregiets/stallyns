@@ -59,4 +59,4 @@ Modify /opt/retropie/configs/all/retroarch/retroarch.cfg to set the following:
     savestate_directory = "/home/pi/RetroPie/roms/saves/"
 
 
-[screenshot]: resources/screenshot.png
+[screenshot]: https://github.com/dlawregiets/stallyns/raw/master/resources/screenshot.png

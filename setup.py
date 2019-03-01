@@ -7,7 +7,7 @@ with open('README.md') as f:
 
 setup(
     name='stallyns',
-    version='0.1.1',
+    version='0.1.2',
     description='Webapp for user switching with RetroPie and EmulationStation',
     long_description=readme,
     long_description_content_type="text/markdown",
