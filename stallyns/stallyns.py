@@ -65,18 +65,21 @@ def pi_shutdown():
     return redirect("/", 302)
 
 def update_symlink(user_name):
-    rompath = os.path.join(os.path.expanduser('~/'),
+    #rompath = os.path.join(os.path.expanduser('~/'),
+    #                       "RetroPie",
+    #                       "roms")
+    savespath = os.path.join(os.path.expanduser('~/'),
                            "RetroPie",
-                           "roms")
-    if os.path.exists(rompath) and not os.path.islink(rompath):
-        os.rename(rompath, "{}.{}".format(rompath, "orig"))
-    profdir = os.path.join(os.path.expanduser(USER_DIR), user_name)
+                           "saves")
+    #if os.path.exists(rompath) and not os.path.islink(rompath):
+    #    os.rename(rompath, "{}.{}".format(rompath, "orig"))
+    profdir = os.path.join(os.path.expanduser(USER_DIR), user_name, "saves")
     try:
-        os.remove(rompath)
+        os.remove(savespath)
     except FileNotFoundError:
         pass
-    os.symlink(profdir, rompath)
-    restart_es()
+    os.symlink(profdir, savespath)
+    #restart_es()
     return profdir
 
 @app.route("/change_user", methods=['POST'])
@@ -89,13 +92,15 @@ def change_user():
     return "No such user", 500
 
 def current_user():
-    rompath = os.path.join(os.path.expanduser('~/'),
+    savespath = os.path.join(os.path.expanduser('~/'),
                            "RetroPie",
-                           "roms")
-    if os.path.exists(rompath) and not os.path.islink(rompath):
+                           "saves")
+    if os.path.exists(savespath) and not os.path.islink(savespath):
         return None
-    rp = os.path.realpath(rompath)
-    return os.path.basename(rp)
+    rp = os.path.realpath(savespath)
+    user = rp.split('/')[-2]
+    #return os.path.basename(rp)
+    return user
 
 def user_list():
     users = set()

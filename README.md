@@ -12,14 +12,8 @@ For now, it is expected that you have all of your ROMs stored in 'user' director
 
     /home/pi/roms/
     ├── kids
-    │   ├── atari2600
-    │   ├── mame-libretro
-    │   ├── ports
     │   └── saves
     └── me
-        ├── atari2600
-        ├── mame-libretro
-        ├── ports
         └── saves
 
 ## Installation
@@ -55,8 +49,8 @@ I prefer to keep my save state and save files separate from the ROMs, so I do th
 
 Modify /opt/retropie/configs/all/retroarch/retroarch.cfg to set the following:
 
-    savefile_directory = "/home/pi/RetroPie/roms/saves/"
-    savestate_directory = "/home/pi/RetroPie/roms/saves/"
+    savefile_directory = "/home/pi/RetroPie/saves/"
+    savestate_directory = "/home/pi/RetroPie/saves/"
 
 
 [screenshot]: https://github.com/dlawregiets/stallyns/raw/master/resources/screenshot.png
